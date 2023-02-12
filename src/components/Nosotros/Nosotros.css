@@ -1,0 +1,89 @@
+.nosotros {
+  background: #f0eeee !important;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.nosotros h3 {
+  margin-top: 80px;
+  color: #bf7f30;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.nosotros p {
+  color: #bf7839;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  width: 75%;
+  margin-bottom: 80px;
+}
+
+@media only screen and (min-width: 1920px) {
+  .nosotros h3 {
+    font-size: 5rem;
+  }
+
+  .nosotros p {
+    font-size: 2.7rem;
+    line-height: 4.5rem;
+  }
+}
+
+@media (max-width: 912px) {
+  .nosotros h3 {
+    font-size: 3.4rem;
+  }
+  .nosotros p {
+    width: 95% !important;
+    font-size: 2rem;
+    line-height: 3.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .nosotros h3 {
+    font-size: 2.9rem;
+  }
+  .nosotros p {
+    font-size: 1.6rem;
+    line-height: 2.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nosotros h3 {
+    font-size: 2.5rem;
+  }
+  .nosotros p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+}
+
+@media (max-width: 467px) {
+  .nosotros h3 {
+    font-size: 1.9rem;
+  }
+  .nosotros p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
+@media (max-width: 300px) {
+  .nosotros h3 {
+    font-size: 1.6rem;
+  }
+  .nosotros p {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+}
