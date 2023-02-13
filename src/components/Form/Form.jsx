@@ -13,7 +13,6 @@ export const FormInput = ({ label, name, type, placeHolder, required }) => (
       type={type}
       name={name}
       placeholder={placeHolder}
-      
     />
   </div>
 );

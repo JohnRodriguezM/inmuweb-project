@@ -3,7 +3,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
-import { Container } from './components/Anuncios/Container'
+import { Container } from './components/Container/Container'
 
 export const App = () => {
  const [showBtn, setShowBtn] = useState(false);

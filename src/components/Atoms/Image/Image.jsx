@@ -1,3 +1,21 @@
+import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+const MyImage = ({ image }) => (
+  <div>
+    <LazyLoadImage
+      alt={image.alt}
+      height={image.height}
+      src={image.src}
+      width={image.width} />
+  </div>
+);
+
+export default MyImage;
+/*
+
+archivo deploy.sh en la raíz del proyecto
+
 #!/usr/bin/envsh
 
 # abortar en caso de errores
@@ -25,4 +43,4 @@
 # si estás desplegando en https://<NOMBRE DE USUARIO>.github.io/<REPO>
 # git push -f git@github.com:<joseasosa24>/web-inmobiliaria.git main:gh-pages
 
-###cd -
+###cd -*/

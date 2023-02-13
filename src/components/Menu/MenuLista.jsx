@@ -8,11 +8,6 @@ export const MenuLista = () => {
         <MenuItem link="#anuncios" nombreItem="Anuncios" />
         <MenuItem link="#servicios" nombreItem="Servicios" />
         <MenuItem link="#contacto" nombreItem="Contacto" />
-       {/*  <MenuItem link="#" nombreItem="Dropdown link" dropdown>
-          <MenuItem link="#" nombreItem="Action" />
-          <MenuItem link="#" nombreItem="Another action" />
-          <MenuItem link="#" nombreItem="Something else here" />
-        </MenuItem> */}
       </ul>
     );
   };

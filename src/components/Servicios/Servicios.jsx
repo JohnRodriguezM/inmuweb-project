@@ -1,13 +1,22 @@
 import React from 'react'
-import { Titulo } from '../Titulo'
-import './Servicios.css'
+import MyImage from '../Atoms/Image/Image'
+import { Titulo } from '../Atoms/Title/Titulo'
+import './css/Servicios.css'
 import imgServicio1 from '/src/assets/img/img-servicios/servicio-1.png'
 import imgServicio2 from '/src/assets/img/img-servicios/servicio-2.png'
 import imgServicio3 from '/src/assets/img/img-servicios/servicio-3.png'
 
+
 const Servicio = ({ title, desc, img }) => (
     <div className="card">
-        <img src={img} className="card-img" alt="..." />
+    <MyImage
+        image={{
+            src: img,
+            alt: title,
+            height: '100%',
+            width: '100%'
+        }}
+    />
         <div className="card-img-overlay">
             <section className='card-contenido'>
                 <h5 className="card-title">{title}</h5>

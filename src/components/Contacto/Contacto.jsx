@@ -1,34 +1,48 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import './Contacto.css'
+import './css/Contacto.css'
 import { TextField } from '/src/components/Form/Form';
+import { useDispatch } from 'react-redux';
+import { add } from '../Form/FormSlice';
+
+
+
+const initiaValues = {
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+}
+
+const validationSchema = Yup.object().shape({
+    name: Yup.string().required("El nombre es requerido").min(2, "Nombre muy corto").max(50, "Nombre muy largo"),
+    email: Yup.string().email("Ingresa un correo válido").required("El correo es requerido"),
+    phone: Yup.string().matches(/^\d{10}$/, 'Culular debe tener 10 dígitos numericos').required("El teléfono es requerido"),
+    message: Yup.string().required("El mensaje es requerido").min(7, "El mensaje es muy corto")
+  });
 
 const ContactForm = () => {
     const [confirmMessage, setConfirmMessage] = useState(false);
+    const dispatch = useDispatch();
+
+
+    const handleSubmit = (values, { setSubmitting, resetForm }) => {
+        console.log(values)
+        dispatch(add(values))
+        setConfirmMessage(true);
+        resetForm();
+        setTimeout(() => {
+            setConfirmMessage(false);
+            setSubmitting(false);
+        }, 5000);
+    }
 
     return (
         <Formik
-            initialValues={{
-                name: '',
-                email: '',
-                phone: '',
-                message: '',
-            }}
-            validationSchema={Yup.object().shape({
-                name: Yup.string().required("El nombre es requerido").min(2, "Nombre muy corto").max(50, "Nombre muy largo"),
-                email: Yup.string().email("Ingresa un correo válido").required("El correo es requerido"),
-                phone: Yup.string().matches(/^\d{10}$/, 'Culular debe tener 10 dígitos numericos').required("El teléfono es requerido"),
-                message: Yup.string().required("El mensaje es requerido").min(10, "El mensaje es muy corto")
-            })}
-            onSubmit={(values, { setSubmitting, resetForm }) => {
-                setConfirmMessage(true);
-                resetForm();
-                setTimeout(() => {
-                    setConfirmMessage(false);
-                    setSubmitting(false);
-                }, 5000);
-            }}
+            initialValues={initiaValues}
+            validationSchema={validationSchema}
+            onSubmit={handleSubmit}
         >
             {({ isSubmitting }) => (
                 <Form className='form'>

@@ -5,7 +5,7 @@ import Inicio from '../Inicio/Inicio'
 import Menu from '../Menu/Menu'
 import Nosotros from '../Nosotros/Nosotros'
 import { Servicios } from '../Servicios/Servicios'
-import { Anuncios } from './Anuncios'
+import { Anuncios } from '../Anuncios/Anuncios'
 
 export const Container = () => {
   return (

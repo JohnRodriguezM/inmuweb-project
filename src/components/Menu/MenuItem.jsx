@@ -2,8 +2,6 @@ export const MenuItem = ({ link, nombreItem, active, dropdown, children }) => {
     const handleMenuItemClick = () => {
         document.getElementById("navbarNavDropdown").classList.remove("show");
       };
-    
-    
     return (
         // se crea un elemento 'li' con clase 'nav-item' y si 'dropdown' es verdadero, se agrega la clase 'dropdown'
         <li className={`nav-item ${dropdown ? 'dropdown' : ''}`}>

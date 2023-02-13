@@ -1,5 +1,5 @@
 import React from 'react';
-import './Inicio.css'
+import './css/Inicio.css'
 import imgInicio from '/src/assets/img/inicio.jpg'
 
 const Inicio = () => (
