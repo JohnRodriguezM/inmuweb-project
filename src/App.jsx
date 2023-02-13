@@ -1,15 +1,9 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import Menu from './components/Menu/Menu'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Inicio from './components/Inicio/Inicio'
-import Nosotros from './components/Nosotros/Nosotros'
-import { Anuncios } from './components/Anuncios/Anuncios'
-import { Servicios } from './components/Servicios/Servicios'
-import { Contacto } from './components/Contacto/Contacto'
-import { Footer } from './components/Footer/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { Container } from './components/Anuncios/Container'
 
 export const App = () => {
  const [showBtn, setShowBtn] = useState(false);
@@ -32,13 +26,7 @@ export const App = () => {
           <FontAwesomeIcon icon={faArrowUp} style={{ fontSize: '20px' }} />
         </button>
       ): null }
-      <Menu />
-      <Inicio />
-      <Nosotros />
-      <Anuncios />
-      <Servicios />
-      <Contacto />
-      <Footer />
+      <Container/>
     </div>
   )
 }
