@@ -1,18 +1,37 @@
 import Image from '../../Atoms/Image/Image'
 
+import Slider from "react-slick";
+import { anuncios } from '../helper/anuncios'
+
 export const AnuncioItem = ({ anuncio }) => {
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      };
+
+
     return (
         <div className="anuncio-item">
             <div className='contenedor-img'>
-            <Image
-                image={{
-                    src: anuncio.img,
-                    alt: anuncio.titulo,
-                    height: '100%',
-                    width: '100%'
-                }}
-
-            />
+            
+            <Slider {...settings}>
+                {
+                    anuncios.map((el, index) => (
+                        <Image
+                            image={{
+                                src: el.img,
+                                alt: el.titulo,
+                                height: '100%',
+                                width: '100%'
+                            }}
+                        />
+                    ))
+                }
+                </Slider> <br />
                {/* <img src={anuncio.img} alt={anuncio.titulo} className="anuncio-img" />*/}
             </div>
             <div className="anuncio-info">

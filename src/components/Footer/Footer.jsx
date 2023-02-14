@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebookSquare, FaTwitterSquare, FaInstagram } from 'react-icons/fa'
+/*import { FaFacebookSquare, FaTwitterSquare, FaInstagram } from 'react-icons/fa'*/
 import './css/Footer.css'
 import logo from '/src/assets/icons/logo.png'
 
@@ -28,11 +28,11 @@ const FooterSocial = ({ social, icons }) => (
     <div className='footer-social'>
         <h4>{social}</h4>
         <div className='footer-social-icons'>
-            {icons.map(({ href, Icon }) => (
+            {icons > 0 ? icons.map(({ href, Icon }) => (
                 <a href={href} key={href}>
                     <Icon />
                 </a>
-            ))}
+            )): null}
         </div>
     </div>
 )
@@ -43,6 +43,12 @@ const FooterCopyright = ({ copyright, createdBy, link }) => (
         <p>{createdBy} <a href={link} target="_blank"> José Sosa</a></p>
     </div>
 )
+
+/*icons={[
+    { href: '#1', Icon: FaFacebookSquare },
+    { href: '#2', Icon: FaTwitterSquare },
+    { href: '#3', Icon: FaInstagram },
+]}*/
 export const Footer = () => {
     return (
         <footer className='footer'>
@@ -52,11 +58,6 @@ export const Footer = () => {
                 <FooterContact contact='Contacto' phone='Teléfono: +123 456 7890' />
                 <FooterSocial
                     social='Redes sociales'
-                    icons={[
-                        { href: '#1', Icon: FaFacebookSquare },
-                        { href: '#2', Icon: FaTwitterSquare },
-                        { href: '#3', Icon: FaInstagram },
-                    ]}
                 />
             </div>
             <FooterCopyright

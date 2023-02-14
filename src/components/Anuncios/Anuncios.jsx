@@ -12,8 +12,8 @@ export const Anuncios = () => {
         <>
             <section className='anuncios d-flex flex-column justify-content-center' id='anuncios'>
                 <Titulo children={"Anuncios"} />
-                {Array.isArray(anuncios.anuncios) && anuncios.anuncios.length > 0 ?
-                    anuncios.anuncios.map((anuncio, index) => (
+                {Array.isArray(anuncios) && anuncios.length > 0 ?
+                    anuncios.map((anuncio, index) => (
                         <AnuncioItem key={index} anuncio={anuncio} />
                     ))
                     : <h1>No hay anuncios</h1>

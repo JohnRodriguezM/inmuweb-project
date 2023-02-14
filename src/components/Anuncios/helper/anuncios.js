@@ -5,8 +5,7 @@ import Imagen3 from '../../../assets/img/img-anuncios/img-anuncio-3.png'
 import Imagen4 from '../../../assets/img/img-anuncios/img-anuncio-4.png'
 import Imagen5 from '../../../assets/img/img-anuncios/img-anuncio-5.png'
 
-export const anuncios = {
-  "anuncios": [
+export const anuncios = [
       {
           "id": 1,
           "img": Imagen1,
@@ -39,4 +38,3 @@ export const anuncios = {
       }
 
   ]
-};
