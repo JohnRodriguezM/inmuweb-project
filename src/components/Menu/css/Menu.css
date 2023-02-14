@@ -15,7 +15,7 @@
 
 /* Estilos para los elementos de la barra de navegación */
 .nav-link {
-  font-size: 1.5rem ;
+  font-size: 1.1rem ;
   padding: 0.5rem 1rem ;
   transition: background-color 0.5s ease, color 0.5s ease ;
 }
@@ -56,28 +56,10 @@
   }
 
   .nav-link {
-    font-size: 2rem  !important;
+    font-size: 1.8rem  !important;
     padding: 0.7rem 1.2rem;
   }
   .logo {
     width: 110%;
   }
-}
-
-/* @media (min-width: 1920px){
-  .navbar {
-    height: 8% ;
-  }
-
-  .nav-link {
-    font-size: 3rem !important;
-    padding: 0.6rem 0.8rem ;
-  }
-  .logo {
-    width: 98%;
-  }
-} */
-
-@media screen {
-  
 }

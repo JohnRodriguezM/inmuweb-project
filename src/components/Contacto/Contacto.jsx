@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import './css/Contacto.css'
-import { TextField } from '/src/components/Form/Form';
+import { TextField } from '/src/components/Atoms/TextField/TextField';
 import { useDispatch } from 'react-redux';
 import { add } from '../Form/FormSlice';
+import {  TextArea } from '../Atoms/TextArea/TextArea';
 
 
 
@@ -51,10 +52,14 @@ const ContactForm = () => {
                     <TextField name="name" placeholder="Nombre" type="text" />
                     <TextField name="email" placeholder="Correo" type="email" />
                     <TextField name="phone" placeholder="Celular" type="tel" />
-                    <div className="form-text-area">
-                        <Field as="textarea" name="message" placeholder="Motivo de la solicitud" />
+                   
+                    <TextArea
+                        label = "hola"
+                        placeholder={"Motivo de la solicitud"}
+                    />
+                       {/* <Field type="textarea" name="message" placeholder="Motivo de la solicitud" />*/}
                         <ErrorMessage className="mensaje" name="message" component="p" />
-                    </div>
+                    
                     <button type="submit" disabled={isSubmitting}>
                         Enviar
                     </button>

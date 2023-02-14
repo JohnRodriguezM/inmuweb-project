@@ -3,14 +3,19 @@ import Image from '../../Atoms/Image/Image'
 import Slider from "react-slick";
 import { anuncios } from '../helper/anuncios'
 
+import './item.css'
+
 export const AnuncioItem = ({ anuncio }) => {
 
     const settings = {
         dots: true,
         infinite: true,
+        lazyLoad: true,
+        autoplay: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        pauseOnHover: true,
       };
 
 
@@ -18,7 +23,8 @@ export const AnuncioItem = ({ anuncio }) => {
         <div className="anuncio-item">
             <div className='contenedor-img'>
             
-            <Slider {...settings}>
+            <Slider {...settings}
+            >
                 {
                     anuncios.map((el, index) => (
                         <Image

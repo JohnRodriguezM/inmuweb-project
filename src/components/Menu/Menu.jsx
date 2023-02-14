@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import MyImage from '../Atoms/Image/Image';
-import './Menu.css'
+import './css/Menu.css'
 import { MenuLista } from './MenuLista';
 import logo from '/src/assets/icons/logo.png';
 
