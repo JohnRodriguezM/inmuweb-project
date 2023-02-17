@@ -7,6 +7,12 @@ import { useDispatch } from 'react-redux';
 import { add } from '../Form/FormSlice';
 import {  TextArea } from '../Atoms/TextArea/TextArea';
 
+//*firebase
+import { app } from '../../firebase/firebase';
+import { getFirestore, collection, addDoc  } from "firebase/firestore";
+const db = getFirestore(app);
+
+
 
 
 const initiaValues = {
@@ -15,12 +21,12 @@ const initiaValues = {
     phone: '',
     message: '',
 }
-
+//Yup.string().required("El mensaje es requerido").min(7, "El mensaje es muy corto")
 const validationSchema = Yup.object().shape({
     name: Yup.string().required("El nombre es requerido").min(2, "Nombre muy corto").max(50, "Nombre muy largo"),
     email: Yup.string().email("Ingresa un correo válido").required("El correo es requerido"),
     phone: Yup.string().matches(/^\d{10}$/, 'Culular debe tener 10 dígitos numericos').required("El teléfono es requerido"),
-    message: Yup.string().required("El mensaje es requerido").min(7, "El mensaje es muy corto")
+    message: Yup.string().min(7, "El mensaje es muy corto")
   });
 
 const ContactForm = () => {
@@ -28,11 +34,29 @@ const ContactForm = () => {
     const dispatch = useDispatch();
 
 
+
+const createDataFirestore = async ({name, email, phone, message}) => {
+    try {
+        const docRef = await addDoc(collection(db, "info"), {
+          name,
+          email,
+          phone,
+          message
+        });
+        console.log("Document written with ID: ", docRef.id);
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
+}
+
     const handleSubmit = (values, { setSubmitting, resetForm }) => {
         console.log(values)
-        dispatch(add(values))
-        setConfirmMessage(true);
-        resetForm();
+
+        createDataFirestore(values).then(() => {
+            dispatch(add(values))
+            setConfirmMessage(true);
+            resetForm();
+        });
         setTimeout(() => {
             setConfirmMessage(false);
             setSubmitting(false);
@@ -52,14 +76,12 @@ const ContactForm = () => {
                     <TextField name="name" placeholder="Nombre" type="text" />
                     <TextField name="email" placeholder="Correo" type="email" />
                     <TextField name="phone" placeholder="Celular" type="tel" />
-                   
                     <TextArea
-                        label = "hola"
+                        label = "message"
                         placeholder={"Motivo de la solicitud"}
                     />
                        {/* <Field type="textarea" name="message" placeholder="Motivo de la solicitud" />*/}
                         <ErrorMessage className="mensaje" name="message" component="p" />
-                    
                     <button type="submit" disabled={isSubmitting}>
                         Enviar
                     </button>
