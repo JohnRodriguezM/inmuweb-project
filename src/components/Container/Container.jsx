@@ -1,11 +1,11 @@
 import React from 'react'
-import { Contacto } from '../Contacto/Contacto'
 import { Footer } from '../Footer/Footer'
 import Inicio from '../Inicio/Inicio'
 import Menu from '../Menu/Menu'
 import Nosotros from '../Nosotros/Nosotros'
 import { Servicios } from '../Servicios/Servicios'
 import { Anuncios } from '../Anuncios/Anuncios'
+import { ContactLoad } from './../Contacto/ContactLoad';
 
 export const Container = () => {
   return (
@@ -15,7 +15,7 @@ export const Container = () => {
       <Nosotros />
       <Anuncios />
       <Servicios />
-      <Contacto />
+      <ContactLoad />
       <Footer />
     </>
   )

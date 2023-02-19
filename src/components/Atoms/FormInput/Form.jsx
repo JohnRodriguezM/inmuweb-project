@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ErrorMessage, Field } from 'formik';
+import { Field } from 'formik';
 
 export const FormInput = ({ label, name, type, placeHolder, required }) => (
   <div className="form-group">
