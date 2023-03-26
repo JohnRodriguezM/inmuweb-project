@@ -66,12 +66,12 @@
 }
 
 input, textarea {
-  background-color: #bf7839 !important;
+  background-color: #bf783940 !important;
   width: 100%;
   padding: 1.3%;
   font-size: 1rem;
   border: none;
-  color: #fff;
+  color: #bf7839;
   border: 1px solid #fd963b;
   border-radius: 5px;
   box-sizing: border-box;
@@ -100,11 +100,11 @@ input, textarea {
 }
 
 input::placeholder {
-  color: rgba(255, 255, 255, 0.621);
+  color:#b15505;
 }
 textarea::placeholder {
   text-align: left;
-  color: rgba(255, 255, 255, 0.621);
+  color: #b15505;
 }
 
 input:focus,

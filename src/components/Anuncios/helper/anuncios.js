@@ -1,40 +1,93 @@
+import Imagen1 from "../../../assets/img/img-anuncios/1.jpeg";
+import Imagen2 from "../../../assets/img/img-anuncios/2.jpeg";
+import Imagen4 from "../../../assets/img/img-anuncios/4.jpeg";
+import Imagen8 from "../../../assets/img/img-anuncios/8.jpeg";
+import Imagen9 from "../../../assets/img/img-anuncios/9.jpeg";
+import Imagen10 from "../../../assets/img/img-anuncios/10.jpeg";
 
-import Imagen1 from '../../../assets/img/img-anuncios/img-anuncio-1.jpg'
-import Imagen2 from '../../../assets/img/img-anuncios/img-anuncio-2.png'
-import Imagen3 from '../../../assets/img/img-anuncios/img-anuncio-3.png'
-import Imagen4 from '../../../assets/img/img-anuncios/img-anuncio-4.png'
-import Imagen5 from '../../../assets/img/img-anuncios/img-anuncio-5.png'
+import Imagen11 from "../../../assets/img/img-anuncios/11.jpeg";
+import Imagen12 from "../../../assets/img/img-anuncios/12.jpeg";
+
+import Imagen13 from "../../../assets/img/img-anuncios/13.jpeg";
+import Imagen14 from "../../../assets/img/img-anuncios/14.jpeg";
+import Imagen15 from "../../../assets/img/img-anuncios/15.jpeg";
+import Imagen16 from "../../../assets/img/img-anuncios/16.jpeg";
+import Imagen17 from "../../../assets/img/img-anuncios/17.jpeg";
 
 export const anuncios = [
+  {
+    id: 1,
+    img: [
       {
-          "id": 1,
-          "img": Imagen1,
-          "titulo": "Espectacular apartamento de lujo",
-          "descripcion": "Este impresionante apartamento de lujo cuenta con una ubicación privilegiada en el centro de la ciudad, con vistas panorámicas impresionantes y una amplia gama de servicios de lujo."
+        img: Imagen1,
+        titulo: "Excelente casa",
       },
       {
-          "id": 2,
-          "img": Imagen2,
-          "titulo": "8000 metros cuadrados en Santa Solana",
-          "descripcion": "Terreno de 8000 m² en Santa Solana, perfecto para construir tu hogar o inversión en una ubicación privilegiada."
+        img: Imagen2,
       },
       {
-          "id": 3,
-          "img": Imagen3,
-          "titulo": "Casa de campo con amplio jardín",
-          "descripcion": "Este encantador hogar de campo ofrece una gran cantidad de espacio al aire libre en su amplio jardín. Con una amplia sala de estar, cocina moderna y varias habitaciones, esta casa es ideal para una gran familia."
+        img: Imagen9,
       },
       {
-          "id": 4,
-          "img":  Imagen4,
-          "titulo": "Apartamento de 2 dormitorios en Belden Park",
-          "descripcion": "Apartamento de 2 habitaciones con estilo moderno y acogedor en el animado barrio de Belden Park. Ideal para vivir y disfrutar de la vibrante vida urbana."
+        img: Imagen4,
       },
       {
-          "id": 5,
-          "img": Imagen5,
-          "titulo": "Casa urbana clásica 3 dormitorios con aparcamiento y patio trasero",
-          "descripcion": "Esta hermosa casa urbana clásica cuenta con 3 dormitorios, aparcamiento y un patio trasero. Ideal para los que desean un hogar cómodo y elegante con espacio adicional al aire libre."
-      }
-
-  ]
+        img: Imagen10,
+      },
+      {
+        img: Imagen8,
+      },
+    ],
+    titulo: "Hermosa casa 2 Pisos",
+    descripcion:
+      "Esta casa de 2 pisos tiene 3 habitaciones, 3 baños, sala de estar, cocina y comedor. La casa está ubicada en una zona tranquila y segura, en la ciudad de Villavicencio, Meta. - $400.000.000, libre de todo gravamen",
+  },
+  {
+    id: 2,
+    img: [
+      {
+        img: Imagen11,
+        titulo: "Lote 15x20",
+      },
+      {
+        img: Imagen12,
+      },
+    ],
+    titulo: "Lote 15x20 - El Guamo, Tolima",
+    descripcion:
+      "Terreno de 300 m² en El Guamo - Tolima, perfecto para construir tu hogar o inversión en una ubicación privilegiada, condominio Hawaii -$20.000.000.",
+  },
+  {
+    id: 3,
+    img: [
+      {
+        img: Imagen15,
+        titulo: "Excelente casa",
+      },
+      {
+        img: Imagen14,
+      },
+      {
+        img: Imagen16,
+      },
+    ],
+    titulo: "Casa 2 Pisos, 5x15, esquinera",
+    descripcion:
+      "Casa de excelentes acabados, sala, comedor, balcón - $260.000.000 negociables, libre de todo gravamen.",
+  },
+  /*{
+    id: 4,
+    img: Imagen4,
+    titulo: "Apartamento de 2 dormitorios en Belden Park",
+    descripcion:
+      "Apartamento de 2 habitaciones con estilo moderno y acogedor en el animado barrio de Belden Park. Ideal para vivir y disfrutar de la vibrante vida urbana.",
+  },
+  {
+    id: 5,
+    img: Imagen5,
+    titulo:
+      "Casa urbana clásica 3 dormitorios con aparcamiento y patio trasero",
+    descripcion:
+      "Esta hermosa casa urbana clásica cuenta con 3 dormitorios, aparcamiento y un patio trasero. Ideal para los que desean un hogar cómodo y elegante con espacio adicional al aire libre.",
+  },*/
+];

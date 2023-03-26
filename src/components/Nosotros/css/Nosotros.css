@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 1.2rem;
 }
 
 .nosotros h3 {
@@ -25,7 +25,7 @@
   font-family: "Open Sans", sans-serif;
   text-align: center;
   width: 75%;
-  margin-bottom: 80px;
+  margin-bottom: 0px;
 }
 
 @media only screen and (min-width: 1920px) {
@@ -34,7 +34,7 @@
   }
 
   .nosotros p {
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     line-height: 4.5rem;
   }
 }
@@ -45,7 +45,7 @@
   }
   .nosotros p {
     width: 95% !important;
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 3.4rem;
   }
 }
@@ -54,7 +54,7 @@
     font-size: 2.9rem;
   }
   .nosotros p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 2.7rem;
   }
 }
@@ -64,7 +64,7 @@
     font-size: 2.5rem;
   }
   .nosotros p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 2.4rem;
   }
 }
@@ -74,7 +74,7 @@
     font-size: 1.9rem;
   }
   .nosotros p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.5rem;
   }
 }
@@ -83,7 +83,7 @@
     font-size: 1.6rem;
   }
   .nosotros p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.4rem;
   }
 }
